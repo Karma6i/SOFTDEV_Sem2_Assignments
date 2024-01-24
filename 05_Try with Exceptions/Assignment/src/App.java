@@ -36,3 +36,4 @@ public class App {
         System.out.println(number1Int * number2Int);
 }
 }
+// Think I already finished this but it had weird unknonwn issues? Not sure
