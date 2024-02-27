@@ -7,19 +7,21 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         List<String> myList = 
-        List.of("Gov", "Webdev", "Trig", "Softdev", "Lunch", "Study", "English", "Meterology");
+        List.of("GOV", "WEBDEV", "TRIG", "SOFTDEV", "LUNCH", "STUDY", "ENGLISH", "METEOROLOGY");
 
         class Final{
-            Final(<String, String> toLowerCase){
+            Final(<String, String>toLowerCase){
 
             String lowerCasedList = (s) -> s.toLowerCase();
             System.out.println(lowerCaseSchedule);
 
         }
+
+        String StringlowerCaseSchedule = myList.stream().map(toLowerCase).toList();
+        String lowerCaseSchedule = (s) -> s.toLowerCase();
         }
 
-        lowerCaseSchedule = myList.stream().map(toLowerCase).toList();
-        String lowerCaseSchedule = (s) -> s.toLowerCase();
+        
 
         //create  a list of strings.  
         //fill that list with your daily school schedule
