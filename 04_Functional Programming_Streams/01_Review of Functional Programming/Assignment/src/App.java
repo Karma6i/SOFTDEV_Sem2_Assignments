@@ -8,6 +8,7 @@ public class App {
         System.out.println(cFromOO);
         System.out.println(cFromFPDumb);
         System.out.println(cFromFPSmart);
+        System.println(lawofCosinesAngleC);
     }
 
     public static double lawOfCosinesOO(double a, double b, double angDegrees) {
@@ -35,10 +36,17 @@ public class App {
             };
 
     // TODO: write a function called lawOfCosinesAngle
-    public static Function<Double, Function<Double, Function<Double, Double>>> lawOfCosinesAngleC = (
-            a) -> (b) -> (c) -> {
 
-                //angleC = acos((c^2 - a^2 - b^2) / (-2ab))
+    public static Function<Double, Function<Double, Function<Double, Double>>> lawOfCosinesAngleC = (a) -> (b) -> (c) -> {
+                double angRadians = Math.toRadians(angDegrees);
+                double cosinePart = 2 * a * b * Math.cos(angRadians);
+                double aSq = a * a;
+                double bSq = b * b;
+                double cSq = c * c;
+                
+                angleC = acos((c^2 - a^2 - b^2) / (-2ab));
+                
+                return Math.sqrt(aSq + bSq + cSq - cosinePart);
 
             };
 
